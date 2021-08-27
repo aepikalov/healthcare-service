@@ -67,8 +67,8 @@ public class MedicalServiceImplTest {
                 patientInfo.getBirthday(),
                 patientInfo.getHealthInfo());
         BigDecimal currentTemperature = new BigDecimal("34.9");
-
         String message = String.format("Warning, patient with id: %s, need help", info.getId());
+
         PatientInfoRepository patientInfoRepository = Mockito.mock(PatientInfoFileRepository.class);
         Mockito.when(patientInfoRepository.getById(info.getId())).thenReturn(info);
         SendAlertService alertService = Mockito.mock(SendAlertService.class);
@@ -88,8 +88,8 @@ public class MedicalServiceImplTest {
                 patientInfo.getBirthday(),
                 patientInfo.getHealthInfo());
         BigDecimal currentTemperature = new BigDecimal("36.6");
-
         String message = String.format("Warning, patient with id: %s, need help", info.getId());
+
         PatientInfoRepository patientInfoRepository = Mockito.mock(PatientInfoFileRepository.class);
         Mockito.when(patientInfoRepository.getById(info.getId())).thenReturn(info);
         SendAlertService alertService = Mockito.mock(SendAlertService.class);
